@@ -1,0 +1,23 @@
+// variables
+@use "../styles/partials/variables" as *;
+
+// import-section
+// import-bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// import-font(montserrat)
+@import "node_modules/@fontsource/montserrat/index.css";
+@import "node_modules/@fontsource/montserrat/700.css";
+
+// common-formatting-section
+// body-formatting-section
+body{
+    font-family: "Montserrat", sans-serif;
+    color: $text-1;
+    background-color: $background-1;
+}
+
+// img-formatting-section
+img{
+    max-width: 100%;
+}
