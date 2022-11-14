@@ -32,6 +32,8 @@ export default{
         </select>
         <!-- /choice -->
 
+        <div class="my-text">Francesco Cimino classe#73</div>
+
         <!-- actors-container -->
         <div class="actors-container">
             <div class="actors-founded">Founded {{ store.actors.length }} actors</div>
@@ -72,6 +74,14 @@ export default{
             color: white;
             background-color: green;
         }   
+        
+    }
+
+    .my-text{
+        color: white;
+        text-align: center;
+        margin-top: -40px;
+        font-size: 2rem;
     }
 
     // actors-container-formatting-section
@@ -80,6 +90,7 @@ export default{
         margin: 3em 0;
         background-color: $background-2;
         border: 3px solid green;
+        border-radius: 10px;
 
         // actor-founded
         .actors-founded{

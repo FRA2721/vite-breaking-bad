@@ -31,7 +31,7 @@ export default{
 // logo-formatting-section
 .logo {
     display: flex;
-    padding: 1.5em 1.5em;
+    padding: 1.5em 5em;
     align-items: center;
 
     // img

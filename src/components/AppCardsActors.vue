@@ -17,8 +17,8 @@ export default{
         <img :src="actors.img" :alt="actors.name">
         <div class="actors-description">
             <h2><strong>{{ actors.name }}</strong></h2>
-            <h3>{{ actors.category }}</h3>
-            <h4>{{ actors.status }}</h4>
+            <h3><span>&#9679;</span> {{ actors.category }}</h3>
+            <h4><span>&#9679;</span> {{ actors.status }}</h4>
         </div>
     </div>
     <!-- /actors-section -->
@@ -38,11 +38,11 @@ export default{
     background-color: $background-1;
     border: 3px solid  grey;
     transition-duration: 1s;
+    border-radius: 10px;
 
     &:hover img{
         opacity: 1;
         width: 100%;
-        border-radius: 50%;
         transform: scale(.9);
     }
 
@@ -56,22 +56,23 @@ export default{
         border-radius: 0px;
         transition-duration: 1.5s;
         border: 3px solid white;
+        border-radius: 10px;
     }
 
     // actors-description
     .actors-description{
         margin: 1em 0;
-        text-align: center;
+        text-align: left;
 
         // h2-tipography
         h2{
-            font-size: 1.5rem;
+            font-size: 1rem;
             margin-bottom: 1em;
         }
 
         // h3-tipography
         h3{
-            font-size: 1.3rem;
+            font-size: .95rem;
             color: $text-2;
         }
 
@@ -79,6 +80,10 @@ export default{
         h4{
             font-size: 1rem;
             color: $text-2;
+        }
+
+        span{
+            font-size: 1rem;
         }
     }
 }
