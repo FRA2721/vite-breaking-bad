@@ -13,7 +13,7 @@ export default{
     <!-- loader-container -->
     <div class="loader-container">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Breaking_Bad_logo.svg/1280px-Breaking_Bad_logo.svg.png" alt="breaking bad logo">
-        <h1>Wait a minute...</h1>
+        <h2>Wait a minute...</h2>
     </div>
     <!-- /loader-container-section -->
 
@@ -40,7 +40,7 @@ export default{
     }
 
     // h1-tipography
-    h1{
+    h2{
         color: hsl(120, 100%, 25%);
     }
 }
