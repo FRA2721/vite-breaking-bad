@@ -36,7 +36,7 @@ export default{
 
         <!-- actors-container -->
         <div class="actors-container">
-            <div class="actors-founded">Founded {{ store.actors.length }} actors</div>
+            <div class="actors-founded">Founded <span>{{ store.actors.length }}</span> actors</div>
             <div class="actors-card row row-cols-xl-5 g-4" >
                 <div class="col" v-for="actor in store.actors" :key="actor.actors_id">
                     <AppCardsActors :actors="actor" />
@@ -104,6 +104,10 @@ export default{
         // actors-cards
         .actors-card{
             margin: 1em 0;
+        }
+        
+        span{
+            color: green;
         }
     }
 }
