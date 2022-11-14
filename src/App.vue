@@ -22,20 +22,29 @@ export default {
       store,
     }
   },
+  methods: {
+    getActors(){
+      this.store.loader = true;
+      const data = {
+        ...this.store.serie && { category: this.store.serie }
+      }
+      axios
+        .get("https://www.breakingbadapi.com/api/characters", { data })
+        .then( (resp) => {
+          this.store.actors = resp.data;
+          console.log(resp.data);
+        })
+
+        .catch( (error) => {
+          console.log(error);
+        })
+
+        .finally( () => {
+          this.store.loader = false;
+        });
+    }
+  },
   created() {
-
-    this.store.loader = true;
-    // axios
-    axios
-
-    // get-API
-    .get("https://www.breakingbadapi.com/api/characters")
-
-    .then( (resp) => {
-      this.store.actors = resp.data;
-      console.log(this.store.actors);
-      this.store.loader = false;
-    })
   }
 }   
 </script>
@@ -52,8 +61,8 @@ export default {
 
   <!-- main -->
   <main>
-    <AppCardsActorsList />
     <AppLoadingSection  v-if="store.loader" />
+    <AppCardsActorsList v-else  @changeSerie="getActors"/>
   </main>
   <!-- /main -->
 

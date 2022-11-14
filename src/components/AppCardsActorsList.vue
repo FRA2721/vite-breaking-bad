@@ -25,13 +25,10 @@ export default{
     <div class="container">
 
         <!-- choice -->
-        <select class="choice">
-            <option value>Select your category</option>
-            <option value="1">category-1</option>
-            <option value="2">category-2</option>
-            <option value="3">category-3</option>
-            <option value="4">category-4</option>
-            <option value="5">category-5</option>
+        <select class="choice" v-model="store.serie" @change="$emit('changeSerie')">
+            <option value>Select category</option>
+            <option value="Breaking Bad">Breaking Bad</option>
+            <option value="Better Call Saul">Better Call Saul</option>
         </select>
         <!-- /choice -->
 
@@ -82,11 +79,15 @@ export default{
         padding: 3em;
         margin: 3em 0;
         background-color: $background-2;
+        border: 3px solid green;
 
         // actor-founded
         .actors-founded{
             padding: 1em;
             background-color: $background-banner-section;
+            border-radius: 50px;
+            border: 3px solid grey;
+            color: rgb(217, 217, 217);
         }
 
         // actors-cards

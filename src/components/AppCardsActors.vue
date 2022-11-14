@@ -36,6 +36,7 @@ export default{
     height: 100%;
     padding: 1em;
     background-color: $background-1;
+    border: 3px solid  grey;
     transition-duration: 1s;
 
     &:hover img{
@@ -54,6 +55,7 @@ export default{
         opacity: .5;
         border-radius: 0px;
         transition-duration: 1.5s;
+        border: 3px solid white;
     }
 
     // actors-description
