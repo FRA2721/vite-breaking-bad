@@ -14,7 +14,7 @@ export default{
     <header>
         <!-- logo-&-header -->
         <div class="logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Breaking_Bad_logo.svg/1280px-Breaking_Bad_logo.svg.png" alt="Logo Breaking bad">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Breaking_Bad_logo.svg/1280px-Breaking_Bad_logo.svg.png" alt="breaking bad logo">
             <h1>Breaking Bad Api</h1>
         </div>
         <!-- logo-&-header -->

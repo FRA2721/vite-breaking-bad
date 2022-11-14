@@ -41,7 +41,7 @@ export default{
     &:hover img{
         opacity: 1;
         width: 100%;
-        border-radius: 300px;
+        border-radius: 50%;
         transform: scale(.9);
     }
 

@@ -7,13 +7,14 @@ import axios from "axios";
 // import-store-code
 import { store } from "./store";
 
-// import-AppHeader.vue, AppCardsActorsList.vue
+// import-vue-code-section
 import AppHeader from "./components/AppHeader.vue";
 import AppCardsActorsList from "./components/AppCardsActorsList.vue";
+import AppLoadingSection from "./components/AppLoadingSection.vue";
 
 export default {
   components: {
-    AppHeader, AppCardsActorsList
+    AppHeader, AppCardsActorsList, AppLoadingSection
   },
   data(){
     return {
@@ -22,6 +23,8 @@ export default {
     }
   },
   created() {
+
+    this.store.loader = true;
     // axios
     axios
 
@@ -31,6 +34,7 @@ export default {
     .then( (resp) => {
       this.store.actors = resp.data;
       console.log(this.store.actors);
+      this.store.loader = false;
     })
   }
 }   
@@ -49,6 +53,7 @@ export default {
   <!-- main -->
   <main>
     <AppCardsActorsList />
+    <AppLoadingSection  v-if="store.loader" />
   </main>
   <!-- /main -->
 
